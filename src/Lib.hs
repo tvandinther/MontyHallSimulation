@@ -1,4 +1,6 @@
-module Main where
+module Lib
+    ( runSimulations
+    ) where
 
 import qualified Door
 import qualified Simulation
@@ -18,6 +20,3 @@ runSimulations numberOfSimulations = do
   printf "Out of %d simulations:\n" numberOfSimulations
   printf "Car wins no swap: %d\n" (Simulation.countTimesCarWon carWinsNoSwap)
   printf "Car wins swap: %d\n" (Simulation.countTimesCarWon carWinsSwap)
-
-main :: IO ()
-main = runSimulations 1000
